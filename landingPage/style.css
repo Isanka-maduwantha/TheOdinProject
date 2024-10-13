@@ -318,4 +318,21 @@ text-transform: capitalize;
             height: 5vh;
             
         }
+        .designs{
+            flex-wrap: wrap;
+            width:100%;
+            justify-content: center;
+        }
+        .design{
+            width: 200px;
+        }
+        .cover{
+            width: 200px;
+        }
+        .design img{
+            
+        }
+        .design .text{
+            display: none;
+        }
     }
