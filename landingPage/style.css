@@ -1,8 +1,8 @@
 *{
     --text-color:#fff;
     --color01:#ffe169;
-    --color03:#fad643;
-    --color04:#c9a227;
+    --color03:#e4ae2d;
+    --color04:#91720b;
     --color05:#c9a227;
     --color06:#c79006;
     --raleway: "Raleway", sans-serif;
@@ -104,13 +104,24 @@ body{
     text-decoration: none;
     background-color: #76520e;
     color: #fff;
-    padding: 10px ;
-    display: inline;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 15px;
+    width: 80px;
+    border-radius: 50px;
+    border: 1px solid #fff;
 }
-.welcome-img{
- width: 400px;
- height: 150px;
- object-fit: cover;
+.img{
+    width: 50vw;
+ height: 20vh;
+ padding: 10px 0;
+
+}
+.welcome-img {
+ width: 100%;
+ height: 100%;
+ object-fit:cover;
  background-color: #6060607a;
  flex-shrink: 0;
  border-radius: 5px;
