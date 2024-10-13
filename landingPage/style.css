@@ -95,8 +95,9 @@ body{
     
     align-items: center;
     justify-content: center;
-    padding: 5vh 0;
+    padding: 3vw 0;
     height: 50vh;
+    gap: 20px;
     
 
 
