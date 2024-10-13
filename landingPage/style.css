@@ -1,3 +1,9 @@
+*{
+    --color01:#ffe169;
+    --color05:#c9a227;
+    --raleway: "Raleway", sans-serif;
+    --poppins: "Poppins", sans-serif;
+}
 body{
     background: #f6f4f6;
     margin: 0;
@@ -23,6 +29,7 @@ body{
 .logo{
     font-size: 1.4rem;
     
+    
 }
 
 .nav{
@@ -30,6 +37,8 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    font-family: var(--raleway);
+    
    
 }
 .nav ul{
@@ -57,6 +66,7 @@ body{
     
     height: 30vh;
     
+    
 
 }
 .welcome .content{
@@ -70,6 +80,7 @@ body{
     font-size: 2rem;
     margin-bottom: 0;
     margin-top: 10px;
+    font-family: var(--raleway);
 
 }
 .content p{
@@ -101,6 +112,9 @@ body{
     
 
 
+}
+.two h2{
+    font-family: var(--raleway);
 }
 .designs {
     display: flex;
@@ -174,12 +188,14 @@ body{
     border-radius: 10px;
     gap:20px
 }
+
 .read .big{
     font-size: 1.1rem;
     font-weight: 600;
+    margin-bottom: 3px;
 }
 .read .small{
-
+text-transform: capitalize;
 }
 .action .buttons{
     display: flex;
