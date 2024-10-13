@@ -1,4 +1,4 @@
-cp # TheOdinProject
+ TheOdinProject
 Tracking All Odin Project Learning and Practices
 This Repository is all about tracking my odin Practice projects 
 not small Assignments but big projects 
