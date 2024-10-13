@@ -42,6 +42,9 @@ body{
     
     text-decoration: none;
     color: #000;
+    display: flex;
+    padding: 5px 10px;
+    margin-bottom: 10px;
 }
 .welcome{
     display: flex;
@@ -70,7 +73,7 @@ body{
 }
 .content p{
     max-width: 30vw;
-    width: 20vw;
+    width: 40vw;
     margin: 0;
     /* width: 400px; */
     
@@ -164,20 +167,29 @@ body{
     flex-direction: row;
     justify-content: space-around;
    padding: 20px;
-   width:60%;
-    background-color: rgb(7, 212, 7);
+   width:70%;
+   background-color: #4b4b4b32;
     border-radius: 10px;
+    gap:20px
+}
+.read .big{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.read .small{
+
 }
 .action .buttons{
     display: flex;
-    gap: 10px;
+    
   
 }
+
 .buttons button{
     color: #fff;
     border: none;
     background-color: #4b4b4b;
-    padding: 5px 10px;
+    padding: 5px 4vw;
     border-radius: 5px;
 
 }
@@ -215,12 +227,14 @@ body{
         background-color: #ffffff;
         border-radius: 50%;
     }
+  
+   
     @media(max-width:1100px){
         .content h1{
             font-size: 1.6rem;
         }
         .content p{
-            max-width: 20vw;
+            min-width: 20vw;
             font-size: 14px;
         }
         .welcome-img,.welcome-img img{
@@ -229,6 +243,6 @@ body{
         }
         .action{
             height: 5vh;
-            width: ;
+            
         }
     }
