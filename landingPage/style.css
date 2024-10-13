@@ -162,8 +162,8 @@ body{
  width: auto;
  height: 500px;
  
- background-color: #e3e3e35b;
- box-shadow: 0 0 2px 3px rgba(128, 128, 128, 0.22);
+ background-color: #e3e3e300;
+ box-shadow: 0 0 2px 3px rgba(128, 128, 128, 0.02);
  border-radius: 10px;
 
 }
@@ -195,6 +195,28 @@ body{
     overflow: hidden;
     font-family: var(--raleway);
 
+}
+.buy{ display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+justify-content: flex-end;}
+.order{
+    text-decoration: none;
+    font-family: var(--raleway);
+    font-weight: 500;
+    color: #fff;
+    background-color: #c9a227;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 5px 0px rgba(128, 128, 128, 0.483);
+}
+hr{
+    height: 2px;
+    width: 80%;
+    background-color: #000;
+    border-radius: 50px;
 }
 .threeContainer{
     
