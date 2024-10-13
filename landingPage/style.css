@@ -72,9 +72,9 @@ body{
     justify-content: space-between;
     gap: 20px;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     
-    height: 30vh;
+   
     
     
 
@@ -95,7 +95,7 @@ body{
 }
 .content p{
     max-width: 30vw;
-    width: 40vw;
+    width: 50vw;
     margin: 0;
     font-family: var(--roboto-flex);
     font-weight: 400;
@@ -184,7 +184,7 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 10px 10px 0 0;
-    border: 2px solid var(--color01);
+    
    
    
 }
@@ -195,7 +195,7 @@ body{
     text-align: justify;
     width: 90%;
     padding: 5px ;
-    
+    height: 100px;
     max-height: 100px;
     overflow: hidden;
     font-family: var(--raleway);
@@ -318,11 +318,12 @@ text-transform: capitalize;
         
         
     }
-    .social img{
-        width: 16px;
-        height: 16px;
-        background-color: #ffffff;
-        border-radius: 50%;
+    
+    .fa{
+        color :#fff;
+        font-size: 2rem;
+        text-decoration: none;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24);
     }
   
    
