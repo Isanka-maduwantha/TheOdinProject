@@ -236,12 +236,15 @@ text-transform: capitalize;
     
     .copyright{
         margin: 0;
+        font-family: var(--raleway);
+        font-size: 2rem;
     
         
     }
     .social{
         display: flex;
         gap: 10px;
+        
         
         
     }
