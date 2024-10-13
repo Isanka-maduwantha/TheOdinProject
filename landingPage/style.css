@@ -1,6 +1,7 @@
 *{
     --text-color:#fff;
     --color01:#ffe169;
+    --color02:#df8510;
     --color03:#e4ae2d;
     --color04:#91720b;
     --color05:#c9a227;
@@ -32,6 +33,7 @@ body{
     background-color: #dbdbd798;
     background-color: var(--color06);
     color: #fff;
+    box-shadow: 0 2px 30px 30px rgba(128, 128, 128, 0.187);
 }
 .logo{
     font-size: 1.4rem;
@@ -102,15 +104,18 @@ body{
 }
 .content a{
     text-decoration: none;
-    background-color: #76520e;
+    background-color:var(--color02);
     color: #fff;
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 5px 15px;
-    width: 80px;
+    padding: 0.7vh 15px;
+    width: 8vw;
     border-radius: 50px;
     border: 1px solid #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--raleway);
 }
 .img{
     width: 50vw;
@@ -244,13 +249,17 @@ hr{
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
-   padding: 20px;
+   padding: 40px 20px;
    width:70%;
-   background-color: #4b4b4b32;
+   box-shadow: 1px 1px 20px 5px rgba(128, 128, 128, 0.182);
+   
     border-radius: 10px;
     gap:20px;
-    background-color: var(--color03);
+    background-color: var(--color02);
     
+}
+.read{
+    color: #fff;
 }
 
 .read .big{
@@ -279,6 +288,7 @@ text-transform: capitalize;
 }
 .fiveContainer{
     background-color: var(--color06);
+    box-shadow: 0 -10px 30px 30px rgba(128, 128, 128, 0.187);
     
 
 
@@ -332,6 +342,9 @@ text-transform: capitalize;
             min-width: 20vw;
             font-size: 14px;
         }
+        .content a{
+            width: 18vw;
+        }
         .welcome-img,.welcome-img img{
             width: 30vw;
             
@@ -351,9 +364,7 @@ text-transform: capitalize;
         .cover{
             width: 200px;
         }
-        .design img{
-            
-        }
+      
         .design .text{
             display: none;
         }
