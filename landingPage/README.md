@@ -1,11 +1,8 @@
-cp # TheOdinProject
-Tracking All Odin Project Learning and Practices
-This Repository is all about tracking my odin Practice projects 
-not small Assignments but big projects 
-
-Projects in Here 
-1.Project Landing Page -End of CSS Foundations 
-    You can Also Look at live Preview From Here 
-
-
-   
+Name:Project Landing Page
+Type:assignment Project
+Status:To Submit
+Objective:build a landing page from scratch
+Example given: 01.png 
+End Result :
+Avg Time spent on building:7H:30Min(450min)
+commit :Yes
