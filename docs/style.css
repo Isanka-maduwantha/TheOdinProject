@@ -88,6 +88,7 @@ li {
 
 a { 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* align-self: flex-end; */
@@ -99,7 +100,7 @@ a {
     text-decoration: none;
     color:  #000;
     font-weight: 300; /* Gold color */
-    font-size: 12px;
+    font-size: 18px;
     padding: 0  ;
     text-align: center;
     border-radius:  10px;
@@ -111,6 +112,11 @@ a:hover {
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
     color: #ffffff;
+}
+a .date{
+    font-size: 12px;
+
+    
 }
 hr{
     width: 30%;
