@@ -1,5 +1,15 @@
+let userScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(){
-    let randomMove = math.random()
+    let randomMove = (Math.random()*9)
     console.log(randomMove); 
 }
-console.log(getComputerChoice());
+
+function getUserChoice(){
+    let userInput = prompt("Your Move Rock/Paper/Scissors: ")
+    console.log(userInput)
+}
+playRound(userChoice,computerChoice){
+    
+}
