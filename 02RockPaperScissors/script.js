@@ -7,9 +7,31 @@ function getComputerChoice(){
 }
 
 function getUserChoice(){
-    let userInput = prompt("Your Move Rock/Paper/Scissors: ")
-    console.log(userInput)
+    let userInput = prompt("Your Move Rock/Paper/Scissors: ");
+    console.log(userInput);
 }
-playRound(userChoice,computerChoice){
-    
+
+function playRound(userChoice,computerChoice){
+
+    userChoice = userChoice.toLowerCase;
+    if (userChoice == 'r' | userChoice =='rock'){
+        userChoice = 'Rock';
+
+    }
+    else if (userChoice == 'p' | userChoice =='paper'){
+        userChoice = 'Paper';
+    }
+    else {
+        userChoice = 'Scissors';
+    }
+
+    if (computerChoice >= 0 && computerChoice < 3){
+        computerChoice = "Rock";
+    }
+    else if (computerChoice >= 3 && computerChoice < 6){
+        computerChoice = "Paper";
+    }
+    else{
+        computerChoice ="Scissors";
+    }
 }
