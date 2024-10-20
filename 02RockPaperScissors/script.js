@@ -90,7 +90,7 @@ function playRound(userMove,computerMove){
     
  
     
-}console.log(`My Score- "${computerScore} : Your Score- ${userScore}`);
+};
 
 
 }
@@ -101,10 +101,12 @@ for(let i = 0; i < 4; i++){
         playRound(getUserChoice(),getComputerChoice());
      
     if (i == 3){
+        console.log(`My Score ${computerScore} : ${userScore} Your Score`)
         if(computerScore> userScore){
-            console.log("I won the Game");}
+
+            console.log("I WON THE GAME");}
         else if (computerScore < userScore){
-            console.log("I won the Game Kidding kidding You WON!!!");
+            console.log("i won the game 'Kidding kidding' YOU WON!!!");
         }
         else{
             console.log("FULL GAME WAS A DRAW");
