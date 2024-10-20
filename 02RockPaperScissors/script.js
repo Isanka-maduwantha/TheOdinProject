@@ -3,17 +3,19 @@ let computerScore = 0;
 
 function getComputerChoice(){
     let randomMove = (Math.random()*9)
-    console.log(randomMove); 
+    // console.log(randomMove); 
 }
 
 function getUserChoice(){
     let userInput = prompt("Your Move Rock/Paper/Scissors: ");
     console.log(userInput);
+    return userInput;
 }
 
 function playRound(userChoice,computerChoice){
+    console.log(userChoice);
+   let choice = userChoice.toLowerCase();
 
-    userChoice = userChoice.toLowerCase;
     if (userChoice == 'r' | userChoice =='rock'){
         userChoice = 'Rock';
 
@@ -34,4 +36,8 @@ function playRound(userChoice,computerChoice){
     else{
         computerChoice ="Scissors";
     }
+    console.log(userChoice,computerChoice);
+
+    
 }
+playRound(getUserChoice(),getComputerChoice());
