@@ -86,20 +86,26 @@ function playRound(userMove,computerMove){
 
    
 
-    console.log(,userScore);
+    
     
  
     
-}}
-// playRound(getUserChoice(),getComputerChoice());
+}console.log(computerScore,userScore);}
+
 for(let i = 0; i < 4; i++){
    
-    reMatch = reMatch.toLocaleLowerCase();
-    if (i == 3){
+     if(i == 0){
+        playRound(getUserChoice(),getComputerChoice());
+     }
+    else if (i == 3){
         let reMatch = prompt("Do you want to play Again? y/n ");
+        reMatch = reMatch.toLocaleLowerCase();
         if(reMatch== "y"| reMatch=="yes"){
             i = 0;
 
+        }
+        else{
+             i == 4;
         }
          
     }
