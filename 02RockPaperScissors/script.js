@@ -90,18 +90,31 @@ function playRound(userMove,computerMove){
     
  
     
-}console.log(computerScore,userScore);}
+}console.log(`My Score- "${computerScore} : Your Score- ${userScore}`);
+
+
+}
 
 for(let i = 0; i < 4; i++){
    
-     if(i == 0){
+     
         playRound(getUserChoice(),getComputerChoice());
-     }
-    else if (i == 3){
+     
+    if (i == 3){
+        if(computerScore> userScore){
+            console.log("I won the Game");}
+        else if (computerScore < userScore){
+            console.log("I won the Game Kidding kidding You WON!!!");
+        }
+        else{
+            console.log("FULL GAME WAS A DRAW");
+        }
+    
         let reMatch = prompt("Do you want to play Again? y/n ");
         reMatch = reMatch.toLocaleLowerCase();
         if(reMatch== "y"| reMatch=="yes"){
             i = 0;
+            
 
         }
         else{
