@@ -48,9 +48,11 @@ function playRound(userMove,computerMove){
    if (userMove == 'Rock'){
         if(computerMove== 'Paper'){
             console.log(loose);
+            computerScore++;
         }
         else if(computerMove =="Scissors"){
             console.log(win);
+            userScore++;
         }
         else {
             console.log(draw);
@@ -59,9 +61,11 @@ function playRound(userMove,computerMove){
    else if (userMove == 'Paper'){
         if(computerMove== 'Rock'){
             console.log(win);
+            userScore++;
         }
         else if(computerMove =="Scissors"){
             console.log(loose);
+            computerScore++;
         }
         else {
             console.log(draw);
@@ -70,9 +74,11 @@ function playRound(userMove,computerMove){
    }else if (userMove == 'Scissors'){
         if(computerMove== 'Paper'){
             console.log(win);
+            userScore++
         }
         else if(computerMove =="Rock"){
             console.log(loose);
+            computerScore++;
         }
         else {
             console.log(draw);
@@ -80,20 +86,24 @@ function playRound(userMove,computerMove){
 
    
 
-    console.log(userMove,computerMove);
+    console.log(,userScore);
+    
  
     
 }}
-playRound(getUserChoice(),getComputerChoice());
-for(let i = 1; i < 2; ){
-   let reMatch = prompt("Do you want to play Again? y/n ");
+// playRound(getUserChoice(),getComputerChoice());
+for(let i = 0; i < 4; i++){
+   
     reMatch = reMatch.toLocaleLowerCase();
-    if (reMatch == "y"| reMatch =="yes"){
-        playRound(getUserChoice(),getComputerChoice());
+    if (i == 3){
+        let reMatch = prompt("Do you want to play Again? y/n ");
+        if(reMatch== "y"| reMatch=="yes"){
+            i = 0;
+
+        }
+         
     }
-    else{
-        i = 2;
-    }
+   
 
  
 }
