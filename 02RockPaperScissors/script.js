@@ -114,7 +114,8 @@ for(let i = 0; i < 4; i++){
         reMatch = reMatch.toLocaleLowerCase();
         if(reMatch== "y"| reMatch=="yes"){
             i = 0;
-            
+            userScore= 0;
+            computerScore = 0;
 
         }
         else{
