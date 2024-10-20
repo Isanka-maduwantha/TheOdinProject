@@ -95,18 +95,18 @@ function playRound(userMove,computerMove){
 
 }
 
-for(let i = 0; i < 4; i++){
+for(let i = 0; i < 5; i++){
    
      
         playRound(getUserChoice(),getComputerChoice());
      
-    if (i == 3){
+    if (i == 4){
         console.log(`My Score ${computerScore} : ${userScore} Your Score`)
         if(computerScore> userScore){
 
             console.log("I WON THE GAME");}
         else if (computerScore < userScore){
-            console.log("i won the game 'Kidding kidding' YOU WON!!!");
+            console.log("i won the game Kidding kidding YOU WON!!!");
         }
         else{
             console.log("FULL GAME WAS A DRAW");
