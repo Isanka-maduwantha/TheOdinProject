@@ -1,3 +1,9 @@
+
+
+<!-- this is my first psudocode so its incomplete
+Actuall code is somewhat little diffrent -->
+
+
 PRINT "Your move R/P/S?: 
 SET userInput TO GET USER INPUT 
 SET lowerCaseValue TO CONVERT playerMove TO LOWERCASE
@@ -24,7 +30,6 @@ ELSE IF  randomMove IS 2 THEN
 ELSE
     SET randomMove  TO Scissors
 ENDIF
-
 
  
     
