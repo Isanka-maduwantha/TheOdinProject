@@ -1,3 +1,9 @@
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+const result = document.querySelector(".result");
+
+
 let userScore = 0;
 let computerScore = 0;
 
@@ -14,13 +20,14 @@ function getComputerChoice(){
     else{
         randomMove="Scissors";
     }
-    console.log("ME: "+randomMove); 
+    result.textContent +=`ME: ${randomMove} `;
+    
     return randomMove;
 
 }
 
-function getUserChoice(){
-    let userInput = prompt("Your Move Rock/Paper/Scissors: ");
+function getUserChoice(userInput){
+    // let userInput = prompt("Your Move Rock/Paper/Scissors: ");
     
     
     userInput = userInput.toLowerCase();
@@ -36,52 +43,54 @@ function getUserChoice(){
     else {
         userInput = 'Scissors';
     }
- console.log("YOU: "+userInput);
+   
+ result.textContent +=`YOU: ${userInput}     `;
+ result.innerHTML ="<br>";
   
     return userInput;
 }
 
 function playRound(userMove,computerMove){
-    let loose = "You Lose";
-    let win = "You Win";
-    let draw = `Its a Draw You Entered "${userMove}" I entered "${userMove}"`;
+    let loose = result.textContent ="You lose";
+    let win =   result.textContent= "You Win";
+    let draw = result.textContent=`Its a Draw You Entered`;
    if (userMove == 'Rock'){
         if(computerMove== 'Paper'){
-            console.log(loose);
+            loose;
             computerScore++;
         }
         else if(computerMove =="Scissors"){
-            console.log(win);
+            win;
             userScore++;
         }
         else {
-            console.log(draw);
+            draw;
         }
    }
    else if (userMove == 'Paper'){
         if(computerMove== 'Rock'){
-            console.log(win);
+            win;
             userScore++;
         }
         else if(computerMove =="Scissors"){
-            console.log(loose);
+            loose;
             computerScore++;
         }
         else {
-            console.log(draw);
+            draw;
     }
 
    }else if (userMove == 'Scissors'){
         if(computerMove== 'Paper'){
-            console.log(win);
+            win;
             userScore++
         }
         else if(computerMove =="Rock"){
-            console.log(loose);
+            loose;
             computerScore++;
         }
         else {
-            console.log(draw);
+            draw;
         }
 
    
@@ -95,37 +104,47 @@ function playRound(userMove,computerMove){
 
 }
 
-for(let i = 0; i < 5; i++){
+rock.addEventListener('click',()=>{
+    playRound(getUserChoice("Rock"),getComputerChoice())
+});
+paper.addEventListener('click',()=>{
+    playRound(getUserChoice("Paper"),getComputerChoice())
+});
+scissors.addEventListener('click',()=>{
+    playRound(getUserChoice("Scissors"),getComputerChoice())
+});
+
+// for(let i = 0; i < 0; i++){
    
      
-        playRound(getUserChoice(),getComputerChoice());
+//         playRound(getUserChoice(),getComputerChoice());
      
-    if (i == 4){
-        console.log(`My Score ${computerScore} : ${userScore} Your Score`)
-        if(computerScore> userScore){
+//     if (i == 4){
+//         console.log(`My Score ${computerScore} : ${userScore} Your Score`)
+//         if(computerScore> userScore){
 
-            console.log("I WON THE GAME");}
-        else if (computerScore < userScore){
-            console.log("i won the game Kidding kidding YOU WON!!!");
-        }
-        else{
-            console.log("FULL GAME WAS A DRAW");
-        }
+//             console.log("I WON THE GAME");}
+//         else if (computerScore < userScore){
+//             console.log("i won the game Kidding kidding YOU WON!!!");
+//         }
+//         else{
+//             console.log("FULL GAME WAS A DRAW");
+//         }
     
-        let reMatch = prompt("Do you want to play Again? y/n ");
-        reMatch = reMatch.toLocaleLowerCase();
-        if(reMatch== "y"| reMatch=="yes"){
-            i = 0;
-            userScore= 0;
-            computerScore = 0;
+//         let reMatch = prompt("Do you want to play Again? y/n ");
+//         reMatch = reMatch.toLocaleLowerCase();
+//         if(reMatch== "y"| reMatch=="yes"){
+//             i = 0;
+//             userScore= 0;
+//             computerScore = 0;
 
-        }
-        else{
-             i == 4;
-        }
+//         }
+//         else{
+//              i == 4;
+//         }
          
-    }
+//     }
    
 
  
-}
+// }
