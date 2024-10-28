@@ -51,9 +51,9 @@ function getUserChoice(userInput){
 }
 
 function playRound(userMove,computerMove){
-    let loose = result.textContent ="You lose";
-    let win =   result.textContent= "You Win";
-    let draw = result.textContent=`Its a Draw You Entered`;
+    let loose = result.textContent +="You lose";
+    let win =   result.textContent+= "You Win";
+    let draw = result.textContent+=`Its a Draw You Entered`;
    if (userMove == 'Rock'){
         if(computerMove== 'Paper'){
             loose;
