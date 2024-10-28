@@ -1,5 +1,59 @@
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+const result = document.querySelector(".result");
+const score =document.querySelector("p");
+const body = document.querySelector("body");
+const start = document.querySelector('.start');
+const startBtn = document.querySelector('.game_start-btn');
+const gamePlay = document.querySelector('.game-play');
+const game = document.querySelector('.game');
+const h1 = document.querySelector('h1');
+startBtn.addEventListener('click',()=>{
+    gamePlay.style = "display:flex";
+    startBtn.style = "display:none";
+    h1.style = "display:none;"
+   
+})
+
+rock.addEventListener('click',()=>{
+    result.innerHTML =" ";
+    playRound(getUserChoice("Rock"),getComputerChoice())
+});
+paper.addEventListener('click',()=>{
+    result.innerHTML =" ";
+    playRound(getUserChoice("Paper"),getComputerChoice())
+});
+scissors.addEventListener('click',()=>{
+    result.innerHTML =" ";
+    playRound(getUserChoice("Scissors"),getComputerChoice())
+});
+
+body.addEventListener('keyup',(event)=>{
+    if(event.key == 'r' ){
+        result.innerHTML =" ";
+        playRound(getUserChoice("Rock"),getComputerChoice());
+
+    }
+    else if(event.key == 'p'){
+        result.innerHTML =" ";
+        playRound(getUserChoice("Paper"),getComputerChoice());
+
+    }
+    else if(event.key =="s"){
+        result.innerHTML =" ";
+        playRound(getUserChoice("Scissors"),getComputerChoice());
+    }
+    else if(event.key =="a"){
+        
+        location.reload()
+        
+    }
+})
+
 let userScore = 0;
 let computerScore = 0;
+score.innerHTML = `You : ${userScore} Me: ${computerScore}`; 
 
 function getComputerChoice(){
     let randomMove = (Math.random()*9)
@@ -14,13 +68,19 @@ function getComputerChoice(){
     else{
         randomMove="Scissors";
     }
-    console.log("ME: "+randomMove); 
+    
+    result.innerHTML +=`<span class="head">Computer</span><span> ${randomMove}</span> <br>`;
+    
+    
+
+    
     return randomMove;
 
 }
 
-function getUserChoice(){
-    let userInput = prompt("Your Move Rock/Paper/Scissors: ");
+
+function getUserChoice(userInput){
+    // let userInput = prompt("Your Move Rock/Paper/Scissors: ");
     
     
     userInput = userInput.toLowerCase();
@@ -36,55 +96,60 @@ function getUserChoice(){
     else {
         userInput = 'Scissors';
     }
- console.log("YOU: "+userInput);
+   
+ result.innerHTML +=`<span class="head">YOU:</span> <span>${userInput}</span> <br>`;
+ 
+
   
     return userInput;
 }
 
 function playRound(userMove,computerMove){
-    let loose = "You Lose";
-    let win = "You Win";
-    let draw = `Its a Draw You Entered "${userMove}" I entered "${userMove}"`;
+   let lose = "<span class='result-end'>You lose</span>";
+   let win = "<span class='result-end'>You Win</span>";
+   let tie = "<span class='result-end'>TIE</span>";
    if (userMove == 'Rock'){
         if(computerMove== 'Paper'){
-            console.log(loose);
+            result.innerHTML +=lose;
             computerScore++;
         }
         else if(computerMove =="Scissors"){
-            console.log(win);
+            result.innerHTML+= win;
             userScore++;
         }
         else {
-            console.log(draw);
+            result.innerHTML+=tie;
         }
    }
    else if (userMove == 'Paper'){
         if(computerMove== 'Rock'){
-            console.log(win);
+            result.innerHTML+= win;
             userScore++;
         }
         else if(computerMove =="Scissors"){
-            console.log(loose);
+            result.innerHTML +=lose;
             computerScore++;
         }
         else {
-            console.log(draw);
+            result.innerHTML+=tie;
     }
 
    }else if (userMove == 'Scissors'){
         if(computerMove== 'Paper'){
-            console.log(win);
+            result.innerHTML+= win;
             userScore++
         }
         else if(computerMove =="Rock"){
-            console.log(loose);
+            result.innerHTML +=lose;
             computerScore++;
         }
         else {
-            console.log(draw);
+            result.innerHTML+=tie;
         }
 
-   
+        
+
+        
 
     
     
@@ -92,40 +157,29 @@ function playRound(userMove,computerMove){
     
 };
 
-
-}
-
-for(let i = 0; i < 4; i++){
+score.innerHTML = `You : ${userScore} Computer: ${computerScore}`; 
+if (userScore === 5 && computerScore < userScore){
+    start.innerHTML += "Congratz You Win   <br>press 'a' to Replay";
+    userScore= 0;
+    computerScore = 0;
+    gamePlay.style = "display:none";
    
-     
-        playRound(getUserChoice(),getComputerChoice());
-     
-    if (i == 3){
-        console.log(`My Score ${computerScore} : ${userScore} Your Score`)
-        if(computerScore> userScore){
 
-            console.log("I WON THE GAME");}
-        else if (computerScore < userScore){
-            console.log("i won the game Kidding kidding YOU WON!!!");
-        }
-        else{
-            console.log("FULL GAME WAS A DRAW");
-        }
+
+}else if(computerScore ===5){
+    start.innerHTML += "Sorry you Loose <br>press <em>'a'</em> to Replay ";
+    userScore= 0;
+    computerScore = 0;
+    gamePlay.style = "display:none";
+   
+
+
     
-        let reMatch = prompt("Do you want to play Again? y/n ");
-        reMatch = reMatch.toLocaleLowerCase();
-        if(reMatch== "y"| reMatch=="yes"){
-            i = 0;
-            userScore= 0;
-            computerScore = 0;
-
-        }
-        else{
-             i == 4;
-        }
-         
-    }
-   
-
- 
 }
+
+
+}
+
+
+
+
