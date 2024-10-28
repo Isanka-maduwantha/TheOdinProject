@@ -2,10 +2,13 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const result = document.querySelector(".result");
+const score =document.querySelector("p");
+
 
 
 let userScore = 0;
 let computerScore = 0;
+score.textContent = `You : ${userScore} Me: ${computerScore}`; 
 
 function getComputerChoice(){
     let randomMove = (Math.random()*9)
@@ -20,8 +23,10 @@ function getComputerChoice(){
     else{
         randomMove="Scissors";
     }
-    result.textContent +=`ME: ${randomMove} \n`;
-    // result.innerHTML += ;
+    
+    result.textContent +=`ME: ${randomMove} `;
+    
+    
     
     return randomMove;
 
@@ -92,31 +97,51 @@ function playRound(userMove,computerMove){
             result.textContent+=`Its a Draw !`;
         }
 
-   
+        
+
+        
 
     
     
  
     
 };
+score.textContent = `You : ${userScore} Me: ${computerScore}`; 
+if (userScore === 5 && computerScore < userScore){
+    result.textContent = "Congratz You Win";
+    userScore= 0;
+    computerScore = 0;
+
+
+}else if(computerScore ===5){
+    result.textContent = "Sorry you Loose";
+    userScore= 0;
+    computerScore = 0;
+    
+}
 
 
 }
 
 rock.addEventListener('click',()=>{
+    result.textContent =" ";
     playRound(getUserChoice("Rock"),getComputerChoice())
 });
 paper.addEventListener('click',()=>{
+    result.textContent =" ";
     playRound(getUserChoice("Paper"),getComputerChoice())
 });
 scissors.addEventListener('click',()=>{
+    result.textContent =" ";
     playRound(getUserChoice("Scissors"),getComputerChoice())
 });
+
+
 
 // for(let i = 0; i < 0; i++){
    
      
-//         playRound(getUserChoice(),getComputerChoice());
+       
      
 //     if (i == 4){
 //         console.log(`My Score ${computerScore} : ${userScore} Your Score`)
