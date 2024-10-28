@@ -20,7 +20,8 @@ function getComputerChoice(){
     else{
         randomMove="Scissors";
     }
-    result.textContent +=`ME: ${randomMove} `;
+    result.textContent +=`ME: ${randomMove} \n`;
+    // result.innerHTML += ;
     
     return randomMove;
 
@@ -44,53 +45,51 @@ function getUserChoice(userInput){
         userInput = 'Scissors';
     }
    
- result.textContent +=`YOU: ${userInput}     `;
- result.innerHTML ="<br>";
+ result.textContent +=`YOU: ${userInput}`;
+
   
     return userInput;
 }
 
 function playRound(userMove,computerMove){
-    let loose = result.textContent +="You lose";
-    let win =   result.textContent+= "You Win";
-    let draw = result.textContent+=`Its a Draw You Entered`;
+  
    if (userMove == 'Rock'){
         if(computerMove== 'Paper'){
-            loose;
+            result.textContent +="You lose";
             computerScore++;
         }
         else if(computerMove =="Scissors"){
-            win;
+            result.textContent+= "You Win";
             userScore++;
         }
         else {
-            draw;
+            result.textContent+=`Its a Draw !`;
         }
    }
    else if (userMove == 'Paper'){
         if(computerMove== 'Rock'){
-            win;
+            result.textContent+= "You Win";
             userScore++;
         }
         else if(computerMove =="Scissors"){
-            loose;
+            result.textContent +="You lose";
             computerScore++;
         }
         else {
-            draw;
+            result.textContent+=`Its a Draw !`;
     }
 
    }else if (userMove == 'Scissors'){
         if(computerMove== 'Paper'){
-            win;
+            result.textContent+= "You Win";
             userScore++
         }
         else if(computerMove =="Rock"){
-            loose;
+            result.textContent +="You lose";
             computerScore++;
         }
         else {
-            draw;
+            result.textContent+=`Its a Draw !`;
         }
 
    
