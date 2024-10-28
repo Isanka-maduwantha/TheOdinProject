@@ -5,11 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scicssor</title>
     <style>
+       body{
+        margin:0;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        
+        color: #3B1E54;
+        font-size: 1.1em;
+        
+       }
+       button{
+        padding:14px 15px;
+        /* background-color: #3B1E54; */
+        color: #EEEEEE;
+        font-weight: 500;
+        font-size: 1.4rem;
+        border-radius: 50%;
+        margin: 0 30px;
+        border: none;
+        box-shadow:  0 0 2px 1px #9B7EBD;
+        cursor:pointer
+
+       }
+       .game_start-btn{
+        background-color: #3B1E54;
+        box-shadow: 1px 2px 3px 2px grey;
+        font-family: 'Courier New', Courier, monospace;
+       }
+       button:hover{
+        box-shadow: 0 0 2px 3px #9770c4;
+       }
+       button img{
+        width: 10vh;
+       }
+       .div{
+        margin: 2vh auto;
+       }
+       .game{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 75%;
+        height: 90%;
+        margin: 40px auto;
+        padding: 2vh 0;
+        border-radius: 10px;
+        box-shadow:1px 0 10px 5px #5d576395;
+        background-color: #EEEEEE;
+        position: absolute;
+       }
+       .start{
+        display: flex;
+        flex-direction:column;
+        gap:10px;
+        font-family: sans-serif;
+       }
        
+       .result{
+        padding: 10px;
+        margin-top: 10px;
+        text-align: center;
+       }
+       p{
+        position: absolute;
+        bottom: 1px;
+        /* right: 20px; */
+       }
+       .game-play{
+        display: none;
+       
+        flex-direction: column;
+       }
+
+       .rpc{
+        width: 10vh;
+       
+        
+        text-align: center;
+        
+        
+       }
+       .result{
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family:sans-serif;
+        align-items: center;
+       }
+       .result .p{
+        height: 20%;
+       }
+     .result span{
+        display: inline-block;
+       
+        width:100px;
+        
+     }
+    span.head{
+    /* font-size: 1vw; */
+    font-weight: bolder;    
+    margin-bottom: 5px;
+    
+    }
+    .result-end{
+    font-size:20px;
+    font-weight: 900;
+    /* margin-top:10px; */
+
+     }
+     .head1{
+       display: flex;
+       flex-direction: column;
+       justify-content: start;
+       align-items: center;
+     }
+     .description{
+        text-align: center;
+     }
     </style>
 </head>
+
 <body>
-    <p>open console <br>CTRL+SHIFT+J</p>
+    <div class="game">
+        <div class="head1">
+        <img src="images/rock-paper-scissors.png" class="rpc"alt="rock-paper-scissors">
+        <h1>Rock Paper Scissors </h1>
+        <span class="description">
+            Start by Pressing Play<br>
+           Use Buttons or r/ p / s buttons in Keyboard to Play 
+        </span>
+        </div>
+    <div class="start">
+        <span><br></span>
+        <button class="game_start-btn">Play</button>
+    </div>
+    <div class="game-play">
+        <div class="div">
+            <button class="rock"><img src="images/fist.png" alt=""></button>
+            <button class="paper"><img src="images/hand-paper.png" alt="" srcset=""></button>
+            <button class="scissors"><img src="images/scissors.png" alt="" srcset=""></button>
+        </div>
+      
+    <div class="result">
+        
+    </div>
+      <p></p>
+    </div>
+  
+</div>
+    
+    
+
     <script src="script.js">
         
     </script>
