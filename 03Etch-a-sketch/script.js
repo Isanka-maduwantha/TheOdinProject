@@ -5,7 +5,7 @@ buttonInput.addEventListener("click",()=>{
     buttonInput.style ="display:none;"
     blackAndWhite.style = "display:block;"
     let number = parseInt(prompt("What is your number "));numberSquare = number * number;
-for(let i =0; i<numberSquare; i++){
+    for(let i =0; i<numberSquare; i++){
    
     const box = document.createElement('div');
     let boxResolution = 100/number;
@@ -18,6 +18,8 @@ for(let i =0; i<numberSquare; i++){
     box.classList.add("box");
     container.appendChild(box)
 }   const boxes = document.querySelectorAll(".box");
+
+
 for(const box of boxes){
    box.addEventListener('mouseover',()=>{
     box.style.cssText += `background-color: ${bgColor()}`;
@@ -33,10 +35,23 @@ for(const box of boxes){
 
 let bgColor = function randomHex() {
     let hexCode = "0123456789ABCDEF";
+    
+    
     let color = "#"
+    
     for(let i =0; i<8; i++){
         color += hexCode[Math.floor(Math.random()*hexCode.length)];
     }
+    
     return color;
 }
+let grey = function radomBaw(){
+    let baw = ["00000","ffffff"];
+    let blackOrWhite = "#"
+    for(let i = 0; i<1; i++){
+        blackOrWhite +=baw[Math.round(Math.random())]
+    }
+    return blackOrWhite
+}
 console.log(bgColor());
+console.log(grey())
