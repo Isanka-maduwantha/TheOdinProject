@@ -12,6 +12,7 @@ body{
     padding: 10px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     /* background-color: rgb(236, 236, 247); */
     overflow: hidden;
