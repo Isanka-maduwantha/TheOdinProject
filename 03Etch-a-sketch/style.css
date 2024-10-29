@@ -2,3 +2,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container{
+    width: 90vw;
+    display: flex;
+    height:90vh;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+.container div{
+    
+    width: 64px;
+    border: 1px solid #000;
+    height: 64px;
+    
+   
+}
