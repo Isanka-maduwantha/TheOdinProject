@@ -3,6 +3,7 @@ const buttonInput = document.querySelector(".number");
 const blackAndWhite = document.querySelector(".baw")
 buttonInput.addEventListener("click",()=>{ 
     buttonInput.style ="display:none;"
+    blackAndWhite.style = "display:block;"
     let number = parseInt(prompt("What is your number "));numberSquare = number * number;
 for(let i =0; i<numberSquare; i++){
    
