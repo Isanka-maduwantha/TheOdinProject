@@ -15,3 +15,26 @@ function divide(num1,num2){
 let numberOne = 0;
 let numberTwo = 0;
 let operator = "";
+
+function operate(numberOne,numberTwo,operator){
+    switch(operator){
+        case "add":
+            return add(numberOne,numberTwo);
+            break;
+        case "subtract":
+            return subtract(numberOne,numberTwo);
+            break;
+        case "multiply":
+            return multiply(numberOne,numberTwo);
+            break;
+        case "divide":
+            return divide(numberOne,numberTwo);
+            break;
+        default:
+            console.log("Error");
+    } 
+    
+    
+    
+}
+
