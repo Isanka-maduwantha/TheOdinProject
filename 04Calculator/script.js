@@ -11,3 +11,7 @@ function multiply(num1,num2){
 function divide(num1,num2){
     return num1 / num2;
 }
+
+let numberOne = 0;
+let numberTwo = 0;
+let operator = "";
