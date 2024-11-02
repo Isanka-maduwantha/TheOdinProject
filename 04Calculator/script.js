@@ -41,4 +41,5 @@ function operate(numberOne,numberTwo,operator){
 const calculatorText = document.querySelector("#textArea-text") ;
 
 calculatorText.value = "hello"
+const numbers = document.querySelectorAll(".number");
 
