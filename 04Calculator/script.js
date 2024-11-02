@@ -38,3 +38,7 @@ function operate(numberOne,numberTwo,operator){
     
 }
 
+const calculatorText = document.querySelector("#textArea-text") ;
+
+calculatorText.value = "hello"
+
