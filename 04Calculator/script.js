@@ -42,10 +42,27 @@ const calculatorText = document.querySelector("#textArea-text") ;
 
 
 const numbers = document.querySelectorAll(".number");
-
-for(const number of numbers){
-    number.addEventListener('click',()=>{
-        numberOne = number.textContent ;
-        calculatorText.value += `${numberOne}`;
-    })
+const buttons = document.querySelectorAll("button");
+const number = document.getElementsByClassName(".number")
+for(const button of buttons){
+    button.addEventListener('click',() => {
+        let buttonText = button.textContent;
+        for(let i =0; i<=9; i++){
+         if( buttonText == i){
+          console.log(i);
+          calculatorText.value+= i;
+         }else if(buttonText == "."){
+            calculatorText.value += ".";
+         }
 }
+    })
+   
+}
+// for(const number of numbers){
+//     number.addEventListener('click',()=>{
+        
+        
+//         calculatorText.value += number.textContent;
+        
+//     })
+// }
