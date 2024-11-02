@@ -39,30 +39,41 @@ function operate(numberOne,numberTwo,operator){
 }
 
 const calculatorText = document.querySelector("#textArea-text") ;
-
-
 const numbers = document.querySelectorAll(".number");
 const buttons = document.querySelectorAll("button");
+
 const operators = document.querySelectorAll(".operator")
+
 for(const button of buttons){
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
-        for(let i =0; i<=9; i++){
-         if( buttonText == i){
-          console.log(i);
-          calculatorText.value+= i;
-         }else if(buttonText == "."){
-            calculatorText.value += '.';
-         }else if(buttonText == "AC"){
+        
+        
+         if( button.className == "number"){
+          console.log(buttonText);
+          calculatorText.value+= buttonText;
+         }
+         else if(buttonText == "."){
+            console.log(buttonText)
+            calculatorText.value += buttonText;
+         }
+         else if(buttonText == "AC"){
             calculatorText.value = "";
-         }else if(button.className == "add"||
-            button.className == "subtract "||
+
+         }
+         else if(button.className == "add"||
+            button.className == "subtract"||
             button.className == "multiply"||
             button.className == "divide"
-        ){
+          )
+          {
             console.log(buttonText);
+            numberOne = (calculatorText.value)*1;
+            console.log(numberOne)
+            calculatorText.value += buttonText;
          }
-}
+         
+
     })
    
 }
