@@ -40,6 +40,12 @@ function operate(numberOne,numberTwo,operator){
 
 const calculatorText = document.querySelector("#textArea-text") ;
 
-calculatorText.value = "hello"
+
 const numbers = document.querySelectorAll(".number");
 
+for(const number of numbers){
+    number.addEventListener('click',()=>{
+        numberOne = number.textContent ;
+        calculatorText.value += `${numberOne}`;
+    })
+}
