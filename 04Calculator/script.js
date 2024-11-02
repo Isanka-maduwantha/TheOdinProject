@@ -43,7 +43,7 @@ const calculatorText = document.querySelector("#textArea-text") ;
 
 const numbers = document.querySelectorAll(".number");
 const buttons = document.querySelectorAll("button");
-const number = document.getElementsByClassName(".number")
+const operators = document.getElementsByClassName(".operator")
 for(const button of buttons){
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
@@ -52,7 +52,9 @@ for(const button of buttons){
           console.log(i);
           calculatorText.value+= i;
          }else if(buttonText == "."){
-            calculatorText.value += ".";
+            calculatorText.value += '.';
+         }else if(buttonText == "AC"){
+            calculatorText.value = "";
          }
 }
     })
