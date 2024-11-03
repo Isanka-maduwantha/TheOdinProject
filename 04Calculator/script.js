@@ -51,6 +51,12 @@ for(const button of buttons){
          
          if( button.className == "number"){
           console.log(buttonText);
+          if(operator == ""){
+            numberOne += buttonText;
+          }
+          else if(operator !== ""){
+            numberTwo += buttonText
+          }
           calculatorText.value+= buttonText;
          }
          else if(buttonText == "."){
@@ -70,15 +76,15 @@ for(const button of buttons){
             operator = button.className;
             console.log(buttonText);
             console.log(operator)
-            if (numberOne == 0){
-                numberOne = (calculatorText.value)*1;
-                console.log("number one")
-                
-            }
+           
             
             console.log(numberOne)
             calculatorText.value += buttonText;
          }
+
+        
+         
+         
           
 
     })
