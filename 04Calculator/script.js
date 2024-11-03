@@ -48,7 +48,7 @@ for(const button of buttons){
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
         
-        
+         
          if( button.className == "number"){
           console.log(buttonText);
           calculatorText.value+= buttonText;
@@ -66,22 +66,22 @@ for(const button of buttons){
             button.className == "multiply"||
             button.className == "divide"
           )
-          {
+         {
+            operator = button.className;
             console.log(buttonText);
-            numberOne = (calculatorText.value)*1;
+            console.log(operator)
+            if (numberOne == 0){
+                numberOne = (calculatorText.value)*1;
+                console.log("number one")
+                
+            }
+            
             console.log(numberOne)
             calculatorText.value += buttonText;
          }
-         
+          
 
     })
    
 }
-// for(const number of numbers){
-//     number.addEventListener('click',()=>{
-        
-        
-//         calculatorText.value += number.textContent;
-        
-//     })
-// }
+  
