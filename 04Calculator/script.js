@@ -12,11 +12,13 @@ function divide(num1,num2){
     return num1 / num2;
 }
 
-let numberOne = 0;
-let numberTwo = 0;
+let numberOne = "";
+let numberTwo = "";
 let operator = "";
 
 function operate(numberOne,numberTwo,operator){
+    numberOne *= 1;
+    numberTwo *= 1;
     switch(operator){
         case "add":
             return add(numberOne,numberTwo);
@@ -80,6 +82,10 @@ for(const button of buttons){
             
             console.log(numberOne)
             calculatorText.value += buttonText;
+         }
+         else if(button.className == "equal"){
+            calculatorText.value = operate(numberOne,numberTwo,operator) ;
+
          }
 
         
