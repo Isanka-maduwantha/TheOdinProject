@@ -67,6 +67,9 @@ for(const button of buttons){
          }
          else if(buttonText == "AC"){
             calculatorText.value = "";
+            numberOne = "";
+            numberTwo = "";
+            operator = ""
 
          }
          else if(button.className == "add"||
@@ -75,15 +78,29 @@ for(const button of buttons){
             button.className == "divide"
           )
          {
-            operator = button.className;
             console.log(buttonText);
-            console.log(operator)
+            if(operator !== ""){
+                calculatorText.value = operate(numberOne,numberTwo,operator) ;
+                numberOne = calculatorText.value;
+                console.log(`New Value ${numberOne}`)
+                numberTwo = ""
+                operator = button.className;
+                console.log(operator)
+
+            }
+            else{
+                operator = button.className;
+                console.log(operator)
+            }
+            
+            
+            
            
             
             console.log(numberOne)
             calculatorText.value += buttonText;
          }
-         else if(button.className == "equal"){
+         else if(button.className == "equal" ){
             calculatorText.value = operate(numberOne,numberTwo,operator) ;
 
          }
