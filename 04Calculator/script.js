@@ -58,12 +58,25 @@ const buttons = document.querySelectorAll("button");
 const operators = document.querySelectorAll(".operator")
 
 for(const button of buttons){
+    if(numberOne==""){
+        // if(button.className =="delete"){
+        //     button.disabled = true;
+        // }
+            
+        // else if(button.className == "dot"){
+        //     button.disabled = true;
+        // }
+        // else{
+        //     button.disabled=false;
+        // }
+        
+    }
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
         
         let operationProcess = operate(numberOne,numberTwo,operator);
         operationProcess = Math.round(operationProcess*100000)/100000;
-         
+
          if( button.className == "number"){
           console.log(buttonText);
       
@@ -184,6 +197,23 @@ for(const button of buttons){
            
 
          }
+         else if(button.className =="delete"){
+            if(numberTwo =="" && numberOne!=="" && operator !== "" ){
+                operator=""
+            }
+            else if(numberTwo =="" && numberOne!=="" && operator == ""){
+                let lastLetter = numberOne.length-1;
+                let result = numberOne.substring(lastLetter);
+                numberOne = numberOne.replace(result,"");
+                calculatorText.value = numberOne;
+            }
+           
+         }
+
+        //  listen to backspace , if two empty others not remove operator
+        // if two and operator empty remove last one from one
+        // if all are full remove last one from two
+        // if all empty disable backspace
 
         
          
