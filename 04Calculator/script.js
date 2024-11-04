@@ -19,6 +19,14 @@ let operator = "";
 function operate(numberOne,numberTwo,operator){
     numberOne *= 1;
     numberTwo *= 1;
+    if(
+        numberOne == 1 &&
+        numberTwo == 0 &&
+        operator == "divide"
+
+    ){
+        return "Error"
+    }
     switch(operator){
         case "add":
             return add(numberOne,numberTwo);
