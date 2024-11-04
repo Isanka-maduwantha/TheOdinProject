@@ -17,6 +17,7 @@ let numberTwo = "";
 let operator = "";
 
 function operate(numberOne,numberTwo,operator){
+   
     numberOne *= 1;
     numberTwo *= 1;
     if(
@@ -24,8 +25,8 @@ function operate(numberOne,numberTwo,operator){
         numberTwo == 0 &&
         operator == "divide"
 
-    ){
-        return "Error"
+    ){  
+        return "Infinity"
     }
     switch(operator){
         case "add":
@@ -88,7 +89,16 @@ for(const button of buttons){
          {
             console.log(buttonText);
             if(operator !== ""){
-                calculatorText.value = operate(numberOne,numberTwo,operator) ;
+                let calculation = operate(numberOne,numberTwo,operator);
+                calculatorText.value = calculation ;
+                if(calculation == 'Infinity'){
+                    calculatorText.value = "Infinity";
+                    numberOne = "";
+                    numberTwo = "";
+                    operator = "";
+                    return 0;
+                }
+                
                 numberOne = calculatorText.value;
                 console.log(`New Value ${numberOne}`)
                 numberTwo = ""
@@ -110,6 +120,11 @@ for(const button of buttons){
          }
          else if(button.className == "equal" ){
             calculatorText.value = operate(numberOne,numberTwo,operator) ;
+            if(calculatorText.value == 'Infinity' || calculatorText.value =="Error"){
+                numberOne="";
+                numberTwo ="";
+                operator = ""
+            }
 
          }
 
