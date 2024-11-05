@@ -54,11 +54,27 @@ function keyListner(){
     const input = document.querySelector('input');
     input.addEventListener('keydown',(event)=>{
         let keyValue = event.key;
+       
         console.log(keyValue)
         if (keyValue === 'Backspace'){
             return keyValue;
         }
-        
+        else if(keyValue %1 === 0){
+            console.log('number');
+            return typeof keyValue*1;
+        }
+        else if(
+            keyValue == '+'||
+            keyValue == '-'||
+            keyValue == '*'||
+            keyValue == '/'
+
+
+        ){
+            console.log('operator')
+            return 'operatorKey'
+        }
+
        
        
 
@@ -66,7 +82,6 @@ function keyListner(){
     })
 
 }
-keyListner();
 
 const calculatorText = document.querySelector("#textArea-text") ;
 const numbers = document.querySelectorAll(".number");
@@ -74,6 +89,7 @@ const buttons = document.querySelectorAll("button");
 
 const operators = document.querySelectorAll(".operator")
 let buttonTextSymbol ="";
+
 for(const button of buttons){
 
     
@@ -84,7 +100,7 @@ for(const button of buttons){
         let operationProcess = operate(numberOne,numberTwo,operator);
         operationProcess = Math.round(operationProcess*100000)/100000;
 
-         if( button.className == "number"){
+         if( button.className == "number" ){
           console.log(buttonText);
       
           if(operator == ""){
@@ -142,7 +158,8 @@ for(const button of buttons){
          else if(button.className == "add"||
             button.className == "subtract"||
             button.className == "multiply"||
-            button.className == "divide"
+            button.className == "divide" 
+
           )
          {
             console.log(buttonText);
@@ -189,34 +206,39 @@ for(const button of buttons){
                 calculatorText.value = numberOne;
             }
             else{
-                let result = operationProcess;
+                let resultOperation = operationProcess;
 
-             if(result == 'Infinity' || result =="Error"){
+             if(resultOperation == 'Infinity' || resultOperation =="Error"){
                 numberOne="";
                 numberTwo ="";
                 operator = "";
-                 calculatorText.value = result ;
+                 calculatorText.value = resultOperation ;
              }
              else{
-                    calculatorText.value = result ;
+                    calculatorText.value = resultOperation ;
+                    numberOne = resultOperation;
+                    numberTwo =''
+                    operator=''
              }
             }
             
            
 
          }
-         else if(button.className =="delete" || keyListner()=="Backspace"){
+         else if(button.className =="delete" ){
         //  listen to backspace , if two empty others not remove operator
         // if two and operator empty remove last one from one
         // if all are full remove last one from two
             if(numberTwo =="" && numberOne!=="" && operator !== "" ){
-                operator=""
+                operator="";
                 calculatorText.value = numberOne;
 
             }
             else if(numberTwo =="" && numberOne!=="" && operator == ""){
+                numberOne = String(numberOne);
                 let lastLetter = numberOne.length-1;
                 let result = numberOne.substring(lastLetter);
+                // console.log('typeof '+typeof result)
                 numberOne = numberOne.replace(result,"");
                 calculatorText.value = numberOne;
             }
