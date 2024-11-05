@@ -1,3 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
 h1{
     text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.box{
+    width: 100%;
+    background-color: aliceblue;
+    height: 400px;
+    box-shadow: 1px 0px 2px 1px grey;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.calculator{
+ width: 100%;
+ padding: 10px;
+ background-color: rgb(244, 244, 244);
+ height: 100%;
+ border-radius: 10px;
+ box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.458);
+ 
+}
+button{
+    width: 85px;
+    height: 35px;
+    text-align: center;
+    background-color: rgba(216, 215, 215, 0.501);
+    border-radius: 5px;
+    border: 0.1px solid grey;
+    box-shadow: 0 0 1px  rgba(192, 192, 192, 0.277);
+    cursor: pointer;
+
+
+}
+@media(max-width:500px){
+    button{
+        width: 20px;
+    }
+}
+
+.operators{
+    /* display: flex;
+    flex-direction: column;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px; */
+
+    
+
+}
+.operators button{
+    /* width: 60px; */
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: 2px;
+    
+
+
+}
+input{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+.allText{
+    display: flex;
+    justify-content: center;
+    /* width: 90%; */
+    margin: 10px auto;
+
+
 }
