@@ -50,6 +50,23 @@ function operate(numberOne,numberTwo,operator){
     
     
 }
+function keyListner(){
+    const input = document.querySelector('input');
+    input.addEventListener('keydown',(event)=>{
+        let keyValue = event.key;
+        console.log(keyValue)
+        if (keyValue === 'Backspace'){
+            return keyValue;
+        }
+        
+       
+       
+
+       
+    })
+
+}
+keyListner();
 
 const calculatorText = document.querySelector("#textArea-text") ;
 const numbers = document.querySelectorAll(".number");
@@ -58,19 +75,7 @@ const buttons = document.querySelectorAll("button");
 const operators = document.querySelectorAll(".operator")
 let buttonTextSymbol ="";
 for(const button of buttons){
-    if(numberOne==""){
-        // if(button.className =="delete"){
-        //     button.disabled = true;
-        // }
-            
-        // else if(button.className == "dot"){
-        //     button.disabled = true;
-        // }
-        // else{
-        //     button.disabled=false;
-        // }
-        
-    }
+
     
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
@@ -200,7 +205,10 @@ for(const button of buttons){
            
 
          }
-         else if(button.className =="delete"){
+         else if(button.className =="delete" || keyListner()=="Backspace"){
+        //  listen to backspace , if two empty others not remove operator
+        // if two and operator empty remove last one from one
+        // if all are full remove last one from two
             if(numberTwo =="" && numberOne!=="" && operator !== "" ){
                 operator=""
                 calculatorText.value = numberOne;
@@ -221,10 +229,7 @@ for(const button of buttons){
            
          }
 
-        //  listen to backspace , if two empty others not remove operator
-        // if two and operator empty remove last one from one
-        // if all are full remove last one from two
-        // if all empty disable backspace
+    
 
         
          
