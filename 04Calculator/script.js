@@ -1,3 +1,7 @@
+
+let numberOne = "";
+let numberTwo = "";
+let operator = "";
 function add(num1,num2){
     return num1+num2;
 }
@@ -11,10 +15,20 @@ function multiply(num1,num2){
 function divide(num1,num2){
     return num1 / num2;
 }
+function operatorToString(value){
+    switch(value){
+        case '+':
+            return "add"
+        case '-':
+            return "subtract"
+        case '*':
+            return "multiply"
+        case '/':
+            return "divide"
+        
+    }
+}
 
-let numberOne = "";
-let numberTwo = "";
-let operator = "";
 
 function operate(numberOne,numberTwo,operator){
     if(numberOne ==""|| numberTwo==""||operator==""){
@@ -50,18 +64,42 @@ function operate(numberOne,numberTwo,operator){
     
     
 }
-function keyListner(){
+
     const input = document.querySelector('input');
+    const returnValue =""
     input.addEventListener('keydown',(event)=>{
         let keyValue = event.key;
        
         console.log(keyValue)
         if (keyValue === 'Backspace'){
-            return keyValue;
+
+            if(numberTwo =="" && numberOne!=="" && operator !== "" ){
+                operator="";
+                
+
+            }
+            else if(numberTwo =="" && numberOne!=="" && operator == ""){
+                numberOne = String(numberOne)
+                let lastLetter = numberOne.length-1;
+                let result = numberOne.substring(lastLetter);
+                // console.log('typeof '+typeof result)
+                numberOne = numberOne.replace(result,"");
+                
+            }
+            else if(numberTwo!==""){
+                let lastLetter = numberTwo.length-1;
+                let result = numberTwo.substring(lastLetter);
+                numberTwo = numberTwo.replace(result,"");
+                // calculatorText.value = numberOne+buttonTextSymbol+numberTwo;
+            }
         }
         else if(keyValue %1 === 0){
-            console.log('number');
-            return typeof keyValue*1;
+            if(operator == ""){
+                numberOne += keyValue;
+              }
+              else if(operator !== ""){
+                numberTwo += keyValue;
+              }
         }
         else if(
             keyValue == '+'||
@@ -71,9 +109,47 @@ function keyListner(){
 
 
         ){
-            console.log('operator')
-            return 'operatorKey'
+            console.log(keyValue);
+            buttonTextSymbol = keyValue;
+            if(operator !== ""){
+                let calculation = operationProcess;
+                // calculatorText.value = calculation ;
+                if(calculation == 'Infinity'){
+                    calculatorText.value = "Infinity";
+                    numberOne = "";
+                    numberTwo = "";
+                    operator = "";
+                    return 0;
+                }
+
+                numberOne = calculation;
+                calculatorText.value = numberOne;
+                console.log(`New Value ${numberOne}`)
+                numberTwo = ""
+                operator = 
+                console.log(operator)
+
+            }
+            else{
+                
+                
+               
+                
+                operator = operatorToString(keyValue);
+                console.log(operator)
+            }
+            
+            
+            
+           
+            
+           
         }
+        else if(keyValue=="Enter"){
+            returnValue = "enter";
+
+        }
+        return returnValue;
 
        
        
@@ -81,12 +157,13 @@ function keyListner(){
        
     })
 
-}
+// keyListener();
+
 
 const calculatorText = document.querySelector("#textArea-text") ;
 const numbers = document.querySelectorAll(".number");
 const buttons = document.querySelectorAll("button");
-
+let operationProcess = operate(numberOne,numberTwo,operator);
 const operators = document.querySelectorAll(".operator")
 let buttonTextSymbol ="";
 
@@ -97,7 +174,7 @@ for(const button of buttons){
         let buttonText = button.textContent;
        
         
-        let operationProcess = operate(numberOne,numberTwo,operator);
+       
         operationProcess = Math.round(operationProcess*100000)/100000;
 
          if( button.className == "number" ){
@@ -217,8 +294,8 @@ for(const button of buttons){
              else{
                     calculatorText.value = resultOperation ;
                     numberOne = resultOperation;
-                    numberTwo =''
-                    operator=''
+                    numberTwo ='';
+                    operator='';
              }
             }
             
