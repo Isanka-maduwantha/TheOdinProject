@@ -56,7 +56,7 @@ const numbers = document.querySelectorAll(".number");
 const buttons = document.querySelectorAll("button");
 
 const operators = document.querySelectorAll(".operator")
-
+let buttonTextSymbol ="";
 for(const button of buttons){
     if(numberOne==""){
         // if(button.className =="delete"){
@@ -71,8 +71,10 @@ for(const button of buttons){
         // }
         
     }
+    
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
+       
         
         let operationProcess = operate(numberOne,numberTwo,operator);
         operationProcess = Math.round(operationProcess*100000)/100000;
@@ -139,6 +141,7 @@ for(const button of buttons){
           )
          {
             console.log(buttonText);
+            buttonTextSymbol = buttonText;
             if(operator !== ""){
                 let calculation = operationProcess;
                 calculatorText.value = calculation ;
@@ -200,12 +203,20 @@ for(const button of buttons){
          else if(button.className =="delete"){
             if(numberTwo =="" && numberOne!=="" && operator !== "" ){
                 operator=""
+                calculatorText.value = numberOne;
+
             }
             else if(numberTwo =="" && numberOne!=="" && operator == ""){
                 let lastLetter = numberOne.length-1;
                 let result = numberOne.substring(lastLetter);
                 numberOne = numberOne.replace(result,"");
                 calculatorText.value = numberOne;
+            }
+            else if(numberTwo!==""){
+                let lastLetter = numberTwo.length-1;
+                let result = numberTwo.substring(lastLetter);
+                numberTwo = numberTwo.replace(result,"");
+                calculatorText.value = numberOne+buttonTextSymbol+numberTwo;
             }
            
          }
