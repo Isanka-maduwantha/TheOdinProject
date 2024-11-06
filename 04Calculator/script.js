@@ -2,6 +2,17 @@
 let numberOne = "";
 let numberTwo = "";
 let operator = "";
+const calculatorText = document.querySelector("#textArea-text") ;
+const numbers = document.querySelectorAll(".number");
+const buttons = document.querySelectorAll("button");
+const body = document.querySelector('body');
+
+body.addEventListener('mouseenter',()=>{
+    calculatorText.focus();
+})
+// let operationProcess = operate(numberOne,numberTwo,operator);
+const operators = document.querySelectorAll(".operator")
+let buttonTextSymbol ="";
 function add(num1,num2){
     return num1+num2;
 }
@@ -25,6 +36,8 @@ function operatorToString(value){
             return "multiply"
         case '/':
             return "divide"
+        default:
+            return "Error"
         
     }
 }
@@ -66,7 +79,7 @@ function operate(numberOne,numberTwo,operator){
 }
 
     const input = document.querySelector('input');
-    const returnValue =""
+    
     input.addEventListener('keydown',(event)=>{
         let keyValue = event.key;
        
@@ -109,34 +122,35 @@ function operate(numberOne,numberTwo,operator){
 
 
         ){
-            console.log(keyValue);
+            
             buttonTextSymbol = keyValue;
             if(operator !== ""){
-                let calculation = operationProcess;
+                let calculation = operate(numberOne,numberTwo,operator);
                 // calculatorText.value = calculation ;
                 if(calculation == 'Infinity'){
                     calculatorText.value = "Infinity";
                     numberOne = "";
                     numberTwo = "";
                     operator = "";
-                    return 0;
+                    
+                }else{
+                    numberOne = calculation;
+                    calculatorText.value = numberOne; 
+                   
+                    numberTwo = ""
+                    operator = ""
+                    
                 }
 
-                numberOne = calculation;
-                calculatorText.value = numberOne;
-                console.log(`New Value ${numberOne}`)
-                numberTwo = ""
-                operator = 
-                console.log(operator)
+                
+                
+
 
             }
             else{
                 
-                
-               
-                
                 operator = operatorToString(keyValue);
-                console.log(operator)
+                // console.log(operator)
             }
             
             
@@ -145,11 +159,39 @@ function operate(numberOne,numberTwo,operator){
             
            
         }
+
         else if(keyValue=="Enter"){
-            returnValue = "enter";
+            if(numberOne==="" && operator === "")
+                {
+                 calculatorText.value = "0";
+                // console.log(calculatorText.value)
+                }
+            else if(numberTwo ==="")
+                {
+                calculatorText.value = numberOne;
+                }
+            else{
+                let resultOperation = operate(numberOne,numberTwo,operator);
+
+             if(resultOperation == 'Infinity' || resultOperation =="Error")
+                {
+                 numberOne="";
+                
+                }
+             else
+                {
+                   
+                    numberOne = resultOperation;
+                }
+                calculatorText.value = resultOperation ;
+                numberTwo ="";
+                operator = "";
+            }
+            
+            
 
         }
-        return returnValue;
+        
 
        
        
@@ -160,19 +202,14 @@ function operate(numberOne,numberTwo,operator){
 // keyListener();
 
 
-const calculatorText = document.querySelector("#textArea-text") ;
-const numbers = document.querySelectorAll(".number");
-const buttons = document.querySelectorAll("button");
-let operationProcess = operate(numberOne,numberTwo,operator);
-const operators = document.querySelectorAll(".operator")
-let buttonTextSymbol ="";
+
 
 for(const button of buttons){
 
     
     button.addEventListener('click',() => {
         let buttonText = button.textContent;
-       
+        let operationProcess = operate(numberOne,numberTwo,operator);
         
        
         operationProcess = Math.round(operationProcess*100000)/100000;
@@ -222,7 +259,7 @@ for(const button of buttons){
             }
             
         
-            console.log(buttonText)
+            
             
          }
          else if(buttonText == "AC"){
@@ -239,7 +276,7 @@ for(const button of buttons){
 
           )
          {
-            console.log(buttonText);
+            
             buttonTextSymbol = buttonText;
             if(operator !== ""){
                 let calculation = operationProcess;
@@ -253,15 +290,15 @@ for(const button of buttons){
                 }
 
                 numberOne = calculatorText.value;
-                console.log(`New Value ${numberOne}`)
+              
                 numberTwo = ""
                 operator = button.className;
-                console.log(operator)
+                
 
             }
             else{
                 operator = button.className;
-                console.log(operator)
+                
             }
             
             
@@ -271,32 +308,33 @@ for(const button of buttons){
             console.log(numberOne)
             calculatorText.value += buttonText;
          }
-         else if(button.className == "equal" ){
-            if(
-             numberOne=="" && operator == ""
-                
-               
-            ){
+         else if(button.className == "equal" )
+            {
+            if(numberOne=="" && operator == "")
+                {
                 calculatorText.value = "0";
-            }
-            else if(numberTwo ==""){
+                }
+            else if(numberTwo =="")
+                {
                 calculatorText.value = numberOne;
-            }
+                }
             else{
                 let resultOperation = operationProcess;
 
-             if(resultOperation == 'Infinity' || resultOperation =="Error"){
+             if(resultOperation == 'Infinity' || resultOperation =="Error")
+                {
                 numberOne="";
                 numberTwo ="";
                 operator = "";
                  calculatorText.value = resultOperation ;
-             }
-             else{
+                }
+             else
+                {
                     calculatorText.value = resultOperation ;
                     numberOne = resultOperation;
                     numberTwo ='';
                     operator='';
-             }
+                }
             }
             
            
