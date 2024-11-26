@@ -38,6 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
    --background-color-container:#EEEEEE;
    --mobile-font-size:1.1rem;
    --mobile-paddding:1rem;
+   --mobile-margin:1rem;
 }
 /* Mobile Layout design */
 body{
@@ -79,7 +80,7 @@ body{
   text-align: center;
 
   width: 100%;
-  
+  margin-bottom: var(--mobile-margin);
 
   
 
