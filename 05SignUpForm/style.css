@@ -134,7 +134,7 @@ body{
     input{
       border: 1px solid var(--input-border);
       border-radius: 10px;
-      appearance: none;
+      
       font-size: 1.3rem;
       padding: 5px 15px;
       
