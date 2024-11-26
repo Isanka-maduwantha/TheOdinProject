@@ -73,15 +73,26 @@ body{
 
 }
 .side{
-  position: relative;
-
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
   text-align: center;
+
   width: 100%;
+  
+
   
 
   .logo-title{
     font-size: 2rem;
 
      
+  }
+  .logo-image{
+  
+
+    
+    width: 45px;
+    height: 45px;
   }
 }
