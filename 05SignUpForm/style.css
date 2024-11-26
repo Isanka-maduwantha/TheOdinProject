@@ -40,6 +40,7 @@ p, h1, h2, h3, h4, h5, h6 {
    --mobile-paddding:1rem;
    --mobile-margin:1rem;
    --input-border:#e3e7e9;
+   --main-color:#c5bbaf;
 }
 /* Mobile Layout design */
 body{
@@ -131,13 +132,11 @@ body{
       flex-direction: column;
       width: 100%;
     }
-    input{
+    input,button{
       border: 1px solid var(--input-border);
       border-radius: 10px;
       
       font-size: 1.3rem;
       padding: 5px 15px;
-      
-    }
   }
 }
