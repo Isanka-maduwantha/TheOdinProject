@@ -225,9 +225,10 @@ input:user-valid,input:focus:valid{
   .main-header{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 2rem;
-  
+    height: 20%;
+    width: 100%;
     h2{
     
       /* text-align: left; */
@@ -242,6 +243,10 @@ input:user-valid,input:focus:valid{
   }
   .main-form{
     justify-content: center;
+    height: 60%;
+    padding-top:2rem ;
+    padding-bottom: 2rem;
+    
     ul{
       width: auto;
     }
