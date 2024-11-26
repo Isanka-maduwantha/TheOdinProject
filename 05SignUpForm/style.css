@@ -147,5 +147,12 @@ body{
 
   }
   
+  .button-container+p{
+    margin: 12px 0;
+    a{
+      text-decoration: none;
+      color: var(--main-color);
+    }
+  }
 }
 }
