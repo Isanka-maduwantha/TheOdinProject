@@ -44,6 +44,7 @@ p, h1, h2, h3, h4, h5, h6 {
    --invalid-color:red;
    --invalid-background:rgba(255, 0, 0, 0.843)a(255, 0, 0, 0.825);
    --valid-color:#1ee000;
+   --box-shadow:1px 1px solid #ccc;
 }
 /* Mobile Layout design */
 body{
@@ -179,7 +180,7 @@ input:user-valid,input:focus:valid{
     
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;  
   }
   .container{
     width:clamp(600px,80vw,2200px);
@@ -202,7 +203,7 @@ input:user-valid,input:focus:valid{
     .side{
       flex-direction: column;
       justify-content: space-around;
-      width: clamp(160px,320px,40%);
+      width: clamp(160px,465px,40%);
       align-self: flex-end;
       background-image: url(images/side-image.jpg);
       background-repeat: no-repeat;
