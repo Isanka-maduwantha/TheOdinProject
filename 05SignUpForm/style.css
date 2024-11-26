@@ -172,7 +172,7 @@ input:user-valid,input:focus:valid{
 
 /* DeskTop Styles */
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1200px) {
 
   body{
     
@@ -181,8 +181,8 @@ input:user-valid,input:focus:valid{
     background-size: cover;
   }
   .container{
-    width:clamp(600px,80vw,1200px);
-    height: clamp(215px,530px,80vh);
+    width:clamp(600px,80vw,2200px);
+    height: clamp(215px,830px,90vh);
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
@@ -192,6 +192,8 @@ input:user-valid,input:focus:valid{
       display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
+    gap: 10px;
     width: 80%
     }
     .side{
@@ -225,7 +227,7 @@ input:user-valid,input:focus:valid{
   
     h2{
     
-      text-align: left;
+      /* text-align: left; */
       font-size: calc(var(--mobile-font-size)*1.4);
       font-size: 2.5rem;
       
