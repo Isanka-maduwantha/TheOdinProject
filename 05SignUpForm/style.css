@@ -217,6 +217,24 @@ input:user-valid,input:focus:valid{
 
     }
   }
+  .main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2rem;
+  
+    h2{
+    
+      text-align: left;
+      font-size: calc(var(--mobile-font-size)*1.4);
+      font-size: 2.5rem;
+      
+    }
+    .header-details{
+      display: block;
+      
+    }
+  }
   .main-form{
     justify-content: center;
     ul{
