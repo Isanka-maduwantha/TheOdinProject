@@ -42,8 +42,8 @@ p, h1, h2, h3, h4, h5, h6 {
    --input-border:#e3e7e9;
    --main-color:#aa9d8d;
    --invalid-color:red;
-   --invalid-background:red;
-   --valid-color:#fff;
+   --invalid-background:rgba(255, 0, 0, 0.843)a(255, 0, 0, 0.825);
+   --valid-color:#1ee000;
 }
 /* Mobile Layout design */
 body{
@@ -157,6 +157,18 @@ body{
   }
 }
 }
+input{
+  outline: 3px solid #d9d9d9;
+}
+input:user-invalid{
+  outline: 2px solid red;
+}
+input:user-valid,input:focus:valid{
+  outline: 2px solid var(--valid-color);
+}
+
+
+
 
 /* DeskTop Styles */
 

@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="main">
-            <div class="main-header">
-                <h2 class="header-title">Sustainable Living, Stylishly Done</h2>
-                <p class="header-details">EcoVibe offers eco-friendly products that make sustainable living easy and stylish.</p>
-            </div>
-            <form action="" class="main-form">
-                <ul>
-                    <li class="form-list1">
-                        <div class="input-container1">
-                            <label for="first-name">First name</label>
-                            <input type="text" id="first-name" name="first-name">
-                        </div>
-                        <div class="input-container2">
-                            <label for="last-name">Last name</label>
-                            <input type="text" id="last-name" name="last-name">
-                        </div>
-                    </li>
-                    <li class="form-list2">
-                        <div class="input-container1">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="input-container2">
-                            <label for="number">Phone number</label>
-                            <input type="tel" id="number" name="number">
-                        </div>
-                    </li>
-                    <li class="form-list3">
-                        <div class="input-container1">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password">
-                        </div>
-                        <div class="input-container2">
-                            <div class="input-container1">
-                                <label for="conf-password">Confirm Password</label>
-                                <input type="password" id="conf-password" name="password">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="form-list4">
-                        <div class="input-container3">
-                    <input type="checkbox" id="newsletter" name="newsletter" checked><label for="newsletter">I like to join weekly Newsletter</label></div>
-                    
-                        <div class="button-container"><button type="submit">Create Account</button></div>
-                        <p>Already have an account? <a href="" class="account-login">Login</a></p>
-                    </li>
-                </ul>
-            </form>
-            
+      <div class="main">
+        <div class="main-header">
+          <h2 class="header-title">Sustainable Living, Stylishly Done</h2>
+          <p class="header-details">
+            EcoVibe offers eco-friendly products that make sustainable living
+            easy and stylish.
+          </p>
         </div>
-        <div class="side">
-            <h1 class="logo-title">EcoVibe</h1>
-            <img src="images/logo.png" alt="" class="logo-image">
-        </div>
+        <form action="" class="main-form">
+          <ul>
+            <li class="form-list1">
+              <div class="input-container1">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" required/>
+              </div>
+              <div class="input-container2">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" required/>
+              </div>
+            </li>
+            <li class="form-list2">
+              <div class="input-container1">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input-container2">
+                <label for="number">Phone number</label>
+                <input type="tel" id="number" name="number" required/>
+              </div>
+            </li>
+            <li class="form-list3">
+              <div class="input-container1">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required/>
+              </div>
+              <div class="input-container2">
+                <div class="input-container1">
+                  <label for="conf-password">Confirm Password</label>
+                  <input type="password" id="conf-password" name="password" required/>
+                </div>
+              </div>
+            </li>
+            <li class="form-list4">
+              <div class="input-container3">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  checked
+                /><label for="newsletter"
+                  >I like to join weekly Newsletter</label
+                >
+              </div>
+
+              <div class="button-container">
+                <button type="submit">Create Account</button>
+              </div>
+              <p>
+                Already have an account?
+                <a href="" class="account-login">Login</a>
+              </p>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="side">
+        <h1 class="logo-title">EcoVibe</h1>
+        <img src="images/logo.png" alt="" class="logo-image" />
+      </div>
     </div>
-</body>
+  </body>
 </html>
