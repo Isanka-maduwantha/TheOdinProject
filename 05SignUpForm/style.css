@@ -39,6 +39,7 @@ p, h1, h2, h3, h4, h5, h6 {
    --mobile-font-size:1.1rem;
    --mobile-paddding:1rem;
    --mobile-margin:1rem;
+   --input-border:#e3e7e9;
 }
 /* Mobile Layout design */
 body{
@@ -131,7 +132,7 @@ body{
       width: 100%;
     }
     input{
-     
+      border: 1px solid var(--input-border);
       border-radius: 10px;
       appearance: none;
       font-size: 1.3rem;
