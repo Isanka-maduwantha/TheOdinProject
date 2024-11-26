@@ -108,6 +108,10 @@ body{
   flex-direction: column;
   align-items: center;
 
+  h2{
+    text-align: center;
+    font-size: calc(var(--mobile-font-size)*1.4);
+  }
   .header-details{
     display: none;
   }
