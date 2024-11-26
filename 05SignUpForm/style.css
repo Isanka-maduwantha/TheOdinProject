@@ -247,7 +247,16 @@ input:user-valid,input:focus:valid{
       flex-direction: row;
       justify-content: space-evenly;
       gap: 30px;
-            
+      .input-container3{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        input{
+          outline:none;
+          accent-color: #5f4e46;
+          
+        }
+      }   
       .input-container1,.input-container2{
         label{
           color: #545454;
@@ -264,7 +273,7 @@ input:user-valid,input:focus:valid{
     }
     ul .form-list4{
       flex-direction: column;
-      gap: 0;
+      gap: 5px;
       .input-container3{
         margin: 0;
       }
