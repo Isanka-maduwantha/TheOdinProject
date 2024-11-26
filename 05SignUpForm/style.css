@@ -74,7 +74,7 @@ body{
 
 
 }
-.main-header,.input-container1,.input-container2{
+.main-header,.input-container1,.input-container2,.input-container3{
   margin-bottom: var(--mobile-margin);
 }
 .side{
