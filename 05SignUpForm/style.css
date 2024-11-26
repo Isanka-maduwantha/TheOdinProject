@@ -221,8 +221,10 @@ body{
       
       .input-container1,.input-container2{
         input{
-          
+
           padding:2px 5px;
+          font-size: 1rem;
+          border-radius: 6px;
         }
       }
     }
