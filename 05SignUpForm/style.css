@@ -229,18 +229,22 @@ input:user-valid,input:focus:valid{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
-    height: 20%;
+    justify-content: center;
+    gap: 10px;
+    padding:  0 20px;
+    height: 30%;
     width: 100%;
     h2{
     
       /* text-align: left; */
       font-size: calc(var(--mobile-font-size)*1.4);
       font-size: 2.5rem;
+
       
     }
     .header-details{
       display: block;
+      
       
     }
   }
