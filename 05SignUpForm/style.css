@@ -184,6 +184,8 @@ body{
       width: clamp(440px,465px,960px);
     }
     .side{
+      flex-direction: column;
+      justify-content: space-around;
       width: clamp(160px,320px,40%);
       
       background-image: url(images/side-image.jpg);
@@ -191,6 +193,16 @@ body{
       background-size: cover;
       height:100%;
       margin: 0;
+
+      .logo-title{
+        color:#fff;
+      }
+      .logo-image{
+        width: 60%;
+        height: auto;
+        opacity: 0.5;
+        margin-top: -50px;
+      }
 
     }
   }
