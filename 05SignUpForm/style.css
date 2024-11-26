@@ -73,6 +73,9 @@ body{
 
 
 }
+.main-header,.input-container1,.input-container2{
+  margin-bottom: var(--mobile-margin);
+}
 .side{
   display: flex;
   flex-direction: column-reverse;
