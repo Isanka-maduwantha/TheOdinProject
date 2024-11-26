@@ -142,6 +142,7 @@ body{
   button{
     color: #fff;
     background-color: var(--main-color);
+    cursor:pointer;
 
     width: 100%;
 
