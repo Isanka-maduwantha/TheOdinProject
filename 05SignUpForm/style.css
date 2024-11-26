@@ -169,6 +169,8 @@ body{
   body{
     
     background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .container{
     width:clamp(400px,60vw,2000px);
