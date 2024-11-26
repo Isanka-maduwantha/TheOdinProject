@@ -57,6 +57,7 @@ body{
 .container{
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
    
 
   
@@ -98,5 +99,14 @@ body{
     
     width: 45px;
     height: 45px;
+  }
+}
+.main-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header-details{
+    display: none;
   }
 }
