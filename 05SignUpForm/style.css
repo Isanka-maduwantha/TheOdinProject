@@ -139,4 +139,13 @@ body{
       font-size: 1.3rem;
       padding: 5px 15px;
   }
+  button{
+    color: #fff;
+    background-color: var(--main-color);
+
+    width: 100%;
+
+  }
+  
+}
 }
