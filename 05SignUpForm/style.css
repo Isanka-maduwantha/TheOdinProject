@@ -71,10 +71,7 @@ body{
      max-width: 480px;
      height: 100%;
 
-     padding: var(--mobile-paddding);
-
-   
-
+     padding:calc(var(--mobile-paddding)*2) var(--mobile-paddding);
 
 }
 .main-header,.input-container1,.input-container2,.input-container3{
