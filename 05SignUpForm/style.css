@@ -222,6 +222,7 @@ body{
       .input-container1,.input-container2{
         label{
           color: #545454;
+          margin-left: 2px;
           
         }
         input,button{
