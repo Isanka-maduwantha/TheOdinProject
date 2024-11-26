@@ -32,6 +32,39 @@ p, h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
   }
 
-  
-
+/* adding custom properties */
+*{
+   --mobile-paddding:1rem;
+   --background-color-container:#EEEEEE;
+}
 /* Mobile Layout design */
+body{
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+
+    width: 100vw;
+    min-height: 100vh;
+
+}
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+   
+
+    padding: var(--mobile-paddding);
+    background-color: #EEEEEE;
+
+
+     /* width: 100%; */
+     max-width: 480px;
+     height: auto;
+
+   
+
+
+}
