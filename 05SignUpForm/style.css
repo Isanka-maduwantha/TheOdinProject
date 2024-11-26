@@ -285,7 +285,7 @@ input:user-valid,input:focus:valid{
           padding:2px 5px;
           font-size: 1rem;
           border-radius: 6px;
-          box-shadow: 0px 0px 5px 2px #0000003e;
+          box-shadow: 0px 0px 1px 2px #0000003e;
         }
       }
     }
