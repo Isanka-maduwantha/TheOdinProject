@@ -314,8 +314,8 @@ input:user-valid,input:focus:valid{
   overflow: visible;
 }
 .container::after{
-  content: "";
-  background-color: #fff;
+  content: "⨯";
+  background-color: #e2e2e2ba;
   position: absolute;
   top: -10px;
   /* margin-top: -65px; */
@@ -326,7 +326,9 @@ input:user-valid,input:focus:valid{
   height: 52px;
   display: flex;
   justify-content: center;
-  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.542); */
+  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.542);
+   */
+   border: none;
   align-items: center;
   text-align: center;
   font-size: 3rem;
