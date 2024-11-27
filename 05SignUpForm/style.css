@@ -17,8 +17,12 @@ img {
     display: block;
     max-width: 100%;
 }
-input, button, textarea, select {
+input, button, textarea, select,label {
     font: inherit;
+     /* font-family: "DM Mono", monospace; */
+     letter-spacing: 2px;
+     margin-top: 5px;;
+     
 }
 /* text overflow stop */
 p, h1, h2, h3, h4, h5, h6 {
@@ -91,7 +95,11 @@ body{
   
 
   .logo-title{
-    font-size: 4rem;
+    font-size: 6rem;
+    font-family: "Dynalight", cursive;
+    font-weight: 500;
+    letter-spacing: 5px;
+
   }
   .logo-image{
   
@@ -109,9 +117,14 @@ body{
   h2{
     text-align: center;
     font-size: calc(var(--mobile-font-size)*1.4);
+    /* font in h2 */
+    font-family: "DM Serif Text", serif;
+    font-weight: normal;
   }
   .header-details{
     display: none;
+    font-family: "DM Mono", monospace;
+    text-align: center;
   }
 }
 .main-form{
@@ -217,6 +230,8 @@ input:user-valid,input:focus:valid{
 
       .logo-title{
         color:#fff;
+        text-shadow: 0 0 4px  rgb(176, 84, 47);
+     
       }
       .logo-image{
         width: 60%;
