@@ -1,7 +1,7 @@
 # Project Sign-up Form
 
-- Here is the [Mockup](images/sampleMockup.png) before all
-- [See this project live]()
+- Here is the [Mockup](images/sampleMockup.png) before all ie:i created this
+- [See this project live](https://isanka-maduwantha.github.io/TheOdinProject/05Signupform/index.html)
 - [Look all odin projects live](https://isanka-maduwantha.github.io/TheOdinProject/)
 - [look all projects repo](https://github.com/Isanka-maduwantha/TheOdinProject)
   its completed Now 12:07pm 27/11/2024
@@ -13,4 +13,4 @@
 
 ## End Result
 
-[end image](images/end.png)
+![end image](images/end.png)
