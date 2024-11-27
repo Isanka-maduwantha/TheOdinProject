@@ -164,7 +164,8 @@ input{
   outline: 2px solid #aeaeae99;
   box-shadow: 1px 1px 1px var(--box-shadow);
 }
-input:user-invalid{
+/* IN HERE */
+input:user-invalid,input:focus:invalid{
   outline: 2px solid red;
 }
 input:user-valid,input:focus:valid{
